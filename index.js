@@ -40,6 +40,14 @@ app.use('/auth', require('./controller/auth'));
 
 app.use('/home', require('./controller/home'));
 
+app.use('/idea', require('./controller/idea'))
+
+app.use('/search', require('./controller/search'))
+
+app.use('/profile', require('./controller/profile'))
+
+
+
 
 var server = app.listen(process.env.PORT || 3000);
 console.log("Server is up and running on")

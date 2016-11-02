@@ -1,0 +1,21 @@
+<div class="col-md-4 col-md-offset-4">
+  <form action="/profile/edit/<%= data.id %>" method="POST">
+    <div class="form-group" >
+      <label for="authName" class="active" data-error="wrong"></label>
+      <input id="authName" class="form-control" type="text" name="fullName" value="<%= data.fullName %>">
+    </div>
+    <div class="form-group" >
+      <label for="authName" class="active" data-error="wrong"></label>
+      <input id="authName" class="form-control" type="text" name="email" value="<%= data.email %>">
+    </div>
+    <div class="form-group" >
+      <label for="authEmail" class="active" data-error="wrong"></label>
+      <input id="authEmail" class="form-control" type="text" name="job" value="<%= data.job %>">
+    </div>
+    <button class="button tiny white" type="submit">Submit</button>
+  </form>
+  <br />
+  <form action="/profile/delete/<%= data.id %>" method="POST">
+    <button class="button tiny" type="submit">Delete</button>
+  </form>
+</div>
