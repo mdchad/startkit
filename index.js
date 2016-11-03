@@ -44,7 +44,7 @@ app.use('/idea', require('./controller/idea'))
 
 app.use('/search', require('./controller/search'))
 
-app.use('/profile', require('./controller/profile'))
+app.use('/profile', require('./controller/profile'), methodOverride('_method'))
 
 
 

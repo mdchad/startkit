@@ -227,3 +227,22 @@ input::-webkit-input-placeholder {
 .read{
   font-weight: 200;
 }
+
+.sidelink {
+  color:#34495e;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.sidelink:hover {
+  color:#34495e;
+  display: block;
+  text-decoration: none;
+}
+
+.sidelink:focus {
+  color:#34495e;
+  display: block;
+  text-decoration: none;
+}

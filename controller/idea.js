@@ -19,7 +19,7 @@ router.post('/create', isLoggedIn, function(req, res) {
     type: req.body.type
     }).then(function() {
   // res.json(created);
-  res.redirect('/home')
+  res.redirect('/:id')
 })
 });
 

@@ -11,7 +11,7 @@ router.get('/', isLoggedIn, function(req, res) {
       include: [db.user]
     }
   ).then(function(data) {
-  // console.log(data)
+  console.log(data)
   res.render('homepage/home', {data:data});
 })
 });
