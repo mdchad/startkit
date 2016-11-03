@@ -50,7 +50,8 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         // associations can be defined here
         models.user.hasMany(models.idea);
-        models.user.hasMany(models.follow)
+        models.user.hasMany(models.follow);
+        models.user.hasMany(models.commentIdea);
       }
     },
     instanceMethods: {

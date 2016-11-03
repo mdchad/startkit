@@ -34,9 +34,21 @@
       <br />
       <h4 name="Comment">Comment</h4>
       <hr>
-      <form class="form-group col-md-6" action="index.html" method="post">
-        <textarea class="form-control" name="comment" rows="6" cols="40"></textarea>
+      <form class="form-group col-md-12" id="commentUser">
+        <textarea id='ideaComment' class="form-control" name="comment" rows="4" cols="40"></textarea>
+        <br>
+        <button id='submitButton' class="button white" type="submit" value='<%= data.id %>'>Submit</button>
       </form>
+      <br>
+      <h5>All Comments</h5>
+      <hr>
+      <div class="allcomment">
+        <% for (var i = 0; i < data.commentIdeas.length; i++) { %>
+          <p class="commentSection"><%= data.commentIdeas[i].comment %></p>
+          <p class="byline below commentFooter">By <%= data.user.fullName %>: <%= data.user.createdAt %></p>
+          <hr>
+        <% } %>
+      </div>
     </div>
   </div>
 </div>

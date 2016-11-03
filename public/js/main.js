@@ -12,4 +12,22 @@ $(document).ready(function() {
       $('.change').text('Followed')
     })
   })
+
+  $('#commentUser').submit(function(e) {
+    e.preventDefault();
+    // console.log(e.currentTarget.value);
+    // var url = $(this).attr('action')
+    var ideaID = $('#submitButton').val()
+    var data = {comment: $('#ideaComment').val()}
+    $.ajax({
+      url: "http://localhost:3000/idea/comment/" + ideaID,
+      type: 'POST',
+      data: data
+    }).done(function(data){
+      console.log(data)
+      $('.allcomment').append(
+        '<p>' + data.data.comment + '</p>'
+      )
+    })
+  })
 })

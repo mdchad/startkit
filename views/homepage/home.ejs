@@ -12,6 +12,7 @@
     <div class="col-md-8 top-link">
         <a href='/idea/create' class="button white">Pitch an idea</a>
         <a href='#' class="button white">Get feedback</a>
+        <a href='#' class="button white">Inspiration</a>
     </div>
     <div class="col-md-9">
       <h1>Popular</h1>
@@ -24,7 +25,11 @@
             <div class="caption">
               <h3 class="light"><%= data[i].title %></h3>
               <small><%= data[i].industry %></small>
-              <p class="read byline"><span class="byline below">By </span><%= data[i].user.fullName %></p>
+              <p class="read byline tooltip1">
+                <span class="byline below">By </span>
+                <%= data[i].user.fullName %>
+                <span class="tooltiptext"><%= data[i].user.fullName %><br><%= data[i].user.job %></span>
+              </p>
               <!-- <p><a href="#" class="button" role="button">Button</a></p> -->
             </div>
           </div></a>
