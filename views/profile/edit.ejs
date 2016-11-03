@@ -15,7 +15,7 @@
     <button class="button tiny white" type="submit">Submit</button>
   </form>
   <br />
-  <form action="/profile/delete/<%= data.id %>" method="POST">
-    <button class="button tiny" type="submit">Delete</button>
-  </form>
+  <!-- <form id="deleteProfile" action="/profile/<%= data.id %>"> -->
+    <a href="/profile/<%= data.id %>?_method=DELETE"><button class="button tiny" id="<%= data.id %>">Delete</button></a>
+  <!-- </form> -->
 </div>

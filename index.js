@@ -31,6 +31,14 @@ app.use(function(req, res, next){
   next();
 });
 
+app.use(function (req, res, next) {
+  if (req.query._method == 'DELETE') {
+    req.method = 'DELETE';
+    req.url = req.path
+  }
+  next()
+})
+
 
 app.get('/', function(req, res) {
   res.render('index');
@@ -44,7 +52,7 @@ app.use('/idea', require('./controller/idea'))
 
 app.use('/search', require('./controller/search'))
 
-app.use('/profile', require('./controller/profile'), methodOverride('_method'))
+app.use('/profile', require('./controller/profile'))
 
 
 

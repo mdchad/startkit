@@ -17,6 +17,8 @@ router.get('/edit/:id',  isLoggedIn, function(req, res){
   })
 })
 
+
+
 router.post('/edit/:id',  isLoggedIn, function(req, res){
   db.user.update({
     fullName: req.body.fullName,
@@ -26,16 +28,20 @@ router.post('/edit/:id',  isLoggedIn, function(req, res){
           id: req.params.id
     }
   }).then(function(data){
-    console.log("where is th update >>>", data);
-    res.render('profile/profile', {data:data})
+    res.redirect('/profile/' + req.params.id)
   })
 })
 
-router.delete('/profile/delete/:id', isLoggedIn, function(req, res) {
+router.delete('/:id', isLoggedIn, function(req, res) {
    db.user.destroy({
      where: {id: req.params.id}
-    }).then(function(data) {
-         res.redirect('/')
+    }).then(function() {
+      db.idea.findAll({
+        
+
+      }).then(function() {
+        res.redirect('/')
+    })
   })
 });
 

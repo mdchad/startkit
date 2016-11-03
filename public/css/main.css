@@ -232,7 +232,8 @@ input::-webkit-input-placeholder {
   color:#34495e;
   display: block;
   text-decoration: none;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
+  font-size: 12px;
 }
 
 .sidelink:hover {
@@ -245,4 +246,11 @@ input::-webkit-input-placeholder {
   color:#34495e;
   display: block;
   text-decoration: none;
+}
+
+.sidebarTitle {
+  color: #42b983;
+  margin-bottom: 20px;
+  font-weight: 200;
+  font-size: 15px;
 }
