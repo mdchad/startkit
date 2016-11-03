@@ -16,20 +16,19 @@
     <div class="col-md-9">
       <h1>Popular</h1>
       <hr>
-    <% for(var i = 0; i < 3 ; i++ ){ %>
+    <% for(var i = 0; i < data.length ; i++ ){ %>
       <div class="row">
         <div class="col-sm-6 col-md-4 "><a class='card1' href="idea/<%= data[i].id %>">
           <div class="thumbnail">
             <!-- <img src="..." alt="..."> -->
             <div class="caption">
               <h3><%= data[i].title %></h3>
-              <h5><%= data[i].user %></h5>
+              <p class="read byline"><span class="byline below">By </span><%= data[i].user.fullName %></p>
               <!-- <p><a href="#" class="button" role="button">Button</a></p> -->
             </div>
           </div></a>
         </div>
-      <% } %>
-
+        <% } %>
       </div>
   </div>
 </div>

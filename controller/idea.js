@@ -5,7 +5,6 @@ var isLoggedIn = require('../middleware/isLoggedIn');
 var router = express.Router();
 
 router.get('/create',  isLoggedIn, function(req, res){
-
   res.render('idea/create')
 })
 
@@ -17,9 +16,8 @@ router.post('/create', isLoggedIn, function(req, res) {
     businessplan: req.body.businessplan,
     industry: req.body.industry,
     type: req.body.type
-    }).then(function() {
-  // res.json(created);
-  res.redirect('/:id')
+  }).then(function(data) {
+  res.redirect('/idea/' + data.id)
 })
 });
 

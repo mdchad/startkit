@@ -6,8 +6,17 @@ var methodOverride = require('method-override');
 var router = express.Router();
 
 router.get('/:id',  isLoggedIn, function(req, res){
-  db.user.findById(req.params.id).then(function(data){
-    res.render('profile/profile', {data:data})
+  db.user.findById(req.params.id)
+  .then(function(data){
+    db.idea.findAll({
+      where: {
+        userId : data.id
+      }
+    }).then(function(list){
+      console.log("START OF THE LIST>>>>>>>>>>" + list + " and here is data>>>"  + data);
+      res.render('profile/profile', {data:data, list:list})
+
+    })
   })
 })
 
@@ -33,12 +42,13 @@ router.post('/edit/:id',  isLoggedIn, function(req, res){
 })
 
 router.delete('/:id', isLoggedIn, function(req, res) {
-   db.user.destroy({
-     where: {id: req.params.id}
-    }).then(function() {
-      db.idea.findAll({
-        
-
+   db.idea.destroy({
+     where: {userId: req.params.id}
+   }).then(function(data) {
+      db.user.destroy({
+        where: {
+          id: req.params.id
+        }
       }).then(function() {
         res.redirect('/')
     })
