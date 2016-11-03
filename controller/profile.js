@@ -13,7 +13,6 @@ router.get('/:id',  isLoggedIn, function(req, res){
         userId : data.id
       }
     }).then(function(list){
-      console.log("START OF THE LIST>>>>>>>>>>" + list + " and here is data>>>"  + data);
       res.render('profile/profile', {data:data, list:list})
 
     })

@@ -3,10 +3,10 @@
     <div class="col-md-2">
       <p class="sidebarTitle">Browse</p>
 
-      <a href="#" class='sidelink'>Tech</a>
-      <a href="#" class='sidelink'>IoT</a>
-      <a href="#" class='sidelink'>Saas</a>
-      <a href="#" class='sidelink'>Digital Marketing</a>
+      <a href="/home/tech" class='sidelink'>Tech</a>
+      <a href="/home/iot" class='sidelink'>IoT</a>
+      <a href="/home/saas" class='sidelink'>Saas</a>
+      <a href="/home/ecommerce" class='sidelink'>E-commerce</a>
       <a href="#" class='sidelink'></a>
     </div>
     <div class="col-md-8 top-link">
@@ -22,7 +22,8 @@
           <div class="thumbnail">
             <!-- <img src="..." alt="..."> -->
             <div class="caption">
-              <h3><%= data[i].title %></h3>
+              <h3 class="light"><%= data[i].title %></h3>
+              <small><%= data[i].industry %></small>
               <p class="read byline"><span class="byline below">By </span><%= data[i].user.fullName %></p>
               <!-- <p><a href="#" class="button" role="button">Button</a></p> -->
             </div>

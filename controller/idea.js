@@ -22,7 +22,10 @@ router.post('/create', isLoggedIn, function(req, res) {
 });
 
 router.get('/:id', isLoggedIn, function(req, res) {
-  db.idea.findById(req.params.id).then(function(data){
+  db.idea.findById(req.params.id, {
+    include: [db.follow,db.user]
+  }).then(function(data){
+    console.log("ideaaa dataaa>>>>>>>", data)
     res.render('idea/read', {data:data})
   })
 })

@@ -12,6 +12,7 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         // associations can be defined here
         models.idea.belongsTo(models.user, {foreignKey: 'userId', constraints: false});
+        models.idea.hasMany(models.follow)
       }
     }
   });

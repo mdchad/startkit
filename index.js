@@ -54,6 +54,9 @@ app.use('/search', require('./controller/search'))
 
 app.use('/profile', require('./controller/profile'))
 
+app.use('/follow', require('./controller/follow'))
+
+
 
 
 

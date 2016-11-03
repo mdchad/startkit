@@ -1,9 +1,22 @@
 <div class="container-fluid">
   <div class="col-md-12">
     <div class="col-md-3">
-      <a href="#" class="button tiny byline">Follow</a><br />
-      <a href="#" class="button tiny white byline2">Join</a>
-      <p class="byline below">Submited by </p>
+      <% for (var i=0; i < data.follows.length; i++) { %>
+        <% var follow = '' %>
+            <% if (data.follows[i].userId === currentUser.id) { %>
+              <% follow = true %>
+            <% } %>
+      <% } %>
+      <% if (follow) { %>
+        <a href="/follow/<%= data.id %>" id="<%= data.id %>" class="followButton"><button class="button tiny change white">Followed</button></a>
+      <% } else { %>
+        <a href="/follow/<%= data.id %>" id="<%= data.id %>" class="followButton"><button class="button tiny change">Follow</button></a>
+      <% } %>
+      <br>
+
+      <a href="#" class="button tiny byline2">Join</a>
+      <p class="byline">Submited by </p>
+      <p class="byline3"><%= data.user.fullName %><p>
       <a href=#Description class="linkchange">Description</a><br />
       <a href=#BusinessPlan class="linkchange">Business Plan</a><br />
       <a href=#Teams class="linkchange">Teams</a><br />

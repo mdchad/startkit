@@ -59,6 +59,7 @@ table {
     border: 1px solid #4fc08d;
 }
 
+
 .tiny {
     padding: 0.4em 1em;
 }
@@ -216,6 +217,13 @@ input::-webkit-input-placeholder {
   color: #42b983
 }
 
+.byline3 {
+  color: #42b983;
+  margin-top: -10px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
 .byline2 {
   margin-top: 10px;
 }
@@ -289,4 +297,8 @@ input::-webkit-input-placeholder {
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
+}
+
+.light {
+  font-weight: 200;
 }
