@@ -26,7 +26,9 @@ $(document).ready(function() {
     }).done(function(data){
       console.log(data)
       $('.allcomment').append(
-        '<p>' + data.data.comment + '</p>'
+        '<p class="commentSection">' + data.data.comment + '</p>' +
+        '<p class="byline below commentFooter">' + data.data.createdAt + '</p>'
+
       )
     })
   })

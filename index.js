@@ -56,6 +56,9 @@ app.use('/profile', require('./controller/profile'))
 
 app.use('/follow', require('./controller/follow'))
 
+app.use('/inspiration', require('./controller/inspiration'))
+
+
 
 
 

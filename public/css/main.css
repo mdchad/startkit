@@ -251,6 +251,7 @@ input::-webkit-input-placeholder {
   color:#34495e;
   display: block;
   text-decoration: none;
+	border-left: 2px solid #42b983;
 }
 
 .sidelink:focus {

@@ -1,0 +1,19 @@
+<div class="col-md-12">
+  <div class="col-md-2">
+    <h4 class="light byline below">What is this ? </h4>
+    <br>
+    <p class="light">This is a place where user post all their everyday problems they face and what they wish would have existed. You can get you inspiration from here to develop your next idea.
+  </div>
+  <div class="col-md-8 top-link">
+      <a href='/inspiration/create' class="button white">Post a problem</a>
+  </div>
+  <div class="col-md-9">
+    <h1 class="light">Inspiration</h1>
+    <hr>
+    <% for(var i = 0; i < data.length; i++) { %>
+      <div class="problemSection">
+        <p><%= data[i].problem %></p>
+      </div>
+    <% } %>
+  </div>
+</div>

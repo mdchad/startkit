@@ -52,6 +52,7 @@ module.exports = function(sequelize, DataTypes) {
         models.user.hasMany(models.idea);
         models.user.hasMany(models.follow);
         models.user.hasMany(models.commentIdea);
+        models.user.hasMany(models.inspiration);
       }
     },
     instanceMethods: {
