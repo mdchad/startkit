@@ -275,6 +275,10 @@ input::-webkit-input-placeholder {
   color: #2c3e50 !important;
 }
 
+.problemSection {
+	height:100px;
+}
+
 /*tooltip*/
 
 .tooltip1 {

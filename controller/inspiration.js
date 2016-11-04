@@ -6,7 +6,9 @@ var router = express.Router();
 
 router.get('/all',  isLoggedIn, function(req, res){
   db.inspiration.findAll({
+    include:[db.user]
   }).then(function(data){
+    console.log(data);
     res.render('inspiration/all', {data:data})
   })
 })
@@ -19,8 +21,8 @@ router.post('/create', isLoggedIn, function(req, res) {
   db.inspiration.create({
     userId: req.user.id,
     problem: req.body.problem
-  }).then(function(data) {
-    res.render('inspiration/all', {data:data})
+  }).then(function() {
+      res.redirect('/inspiration/all')
   })
 });
 
