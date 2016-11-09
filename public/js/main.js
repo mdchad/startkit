@@ -9,7 +9,7 @@ $(document).ready(function() {
       type: 'POST'
     }).done(function(){
       $('.button.tiny.change').addClass("white");
-      $('.change').text('Followed')
+      $('.change').text('Unfollow')
     })
   })
 
@@ -27,7 +27,7 @@ $(document).ready(function() {
       console.log(data)
       $('.allcomment').append(
         '<p class="commentSection">' + data.data.comment + '</p>' +
-        '<p class="byline below commentFooter">' + data.data.createdAt + '</p>'
+        '<p class="byline below commentFooter">' + data.data.userId + ' '+ data.data.createdAt + '</p>'
 
       )
     })

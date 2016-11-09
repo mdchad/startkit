@@ -11,7 +11,7 @@ router.get('/', isLoggedIn, function(req, res) {
       include: [db.user]
     }
   ).then(function(data) {
-  console.log(data)
+  // console.log(data)
   res.render('homepage/home', {data:data});
 })
 });
@@ -19,19 +19,10 @@ router.get('/', isLoggedIn, function(req, res) {
 router.get('/tech', isLoggedIn, function(req, res) {
     db.idea.findAll({
       where: {
-        industry: "Tech"
+        industry: "Tech",
       }
     }).then(function(data) {
-      res.render('homepage/tech', {data:data})
-    })
-})
-
-router.get('/tech', isLoggedIn, function(req, res) {
-    db.idea.findAll({
-      where: {
-        industry: "Tech"
-      }
-    }).then(function(data) {
+      console.log("hellllllllooooooo>>>>>>>>>>>>>>>>>>>>>>", data);
       res.render('homepage/tech', {data:data})
     })
 })

@@ -15,25 +15,24 @@
       <br>
 
       <a href="#" class="button tiny byline2">Join</a>
-      <p class="byline4"><%= data.follows.length %> followers</p>
       <p class="byline">Submited by </p>
       <p class="byline3"><%= data.user.fullName %><p>
-      <a href=#description class="linkchange">Description</a><br />
-      <a href=#businessPlan class="linkchange">Business Plan</a><br />
-      <a href=#teams class="linkchange">Teams</a><br />
-      <a href=#comment class="linkchange">Comments</a>
+      <a href=#Description class="linkchange">Description</a><br />
+      <a href=#BusinessPlan class="linkchange">Business Plan</a><br />
+      <a href=#Teams class="linkchange">Teams</a><br />
+      <a href=#Comment class="linkchange">Comments</a>
     </div>
     <div class="col-md-8 read">
       <h1 class="maintitle"><%= data.title %></h1>
-      <h4 id="description">Description</h4>
+      <h4 name="Description">Description</h4>
       <hr>
       <p><%= data.description %></p>
       <br />
-      <h4 id="businessPlan">Business Plan</h4>
+      <h4 name="BusinessPlan">Business Plan</h4>
       <hr>
       <p><%= data.businessplan %></p>
       <br />
-      <h4 id="comment">Comment</h4>
+      <h4 name="Comment">Comment</h4>
       <hr>
       <form class="form-group col-md-12" id="commentUser">
         <textarea id='ideaComment' class="form-control" name="comment" rows="4" cols="40"></textarea>

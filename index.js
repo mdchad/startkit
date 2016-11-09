@@ -58,6 +58,9 @@ app.use('/follow', require('./controller/follow'))
 
 app.use('/inspiration', require('./controller/inspiration'))
 
+app.use('/feedback', require('./controller/feedback'))
+
+
 
 
 

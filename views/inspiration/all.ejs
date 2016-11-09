@@ -12,8 +12,8 @@
     <hr>
     <% for(var i = 0; i < data.length; i++) { %>
       <div class="problemSection">
-        <p class="light"><%= data[i].problem %></p>
         <p class="light byline below">Posted by: <%= data[i].user.fullName %></p>
+        <p class="light"><%= data[i].problem %></p>
       </div>
       <hr>
     <% } %>
