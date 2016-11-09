@@ -15,8 +15,11 @@ router.get('/', function(req, res){
 
 router.post('/:id', isLoggedIn, function(req, res) {
   db.idea.findById(req.params.id).then(function(idea) {
-    idea.createFollow({
-      userId: req.user.id
+    db.follow.findOrCreate({
+      where: {
+        userId: req.user.id,
+        ideaId:req.params.id
+      }
     }).then(function() {
       res.redirect('/idea/' + idea.id)
     })
