@@ -25,7 +25,6 @@ router.get('/:id', isLoggedIn, function(req, res) {
   db.idea.findById(req.params.id, {
     include: [db.follow,db.user,db.commentIdea]
   }).then(function(data){
-    console.log("ideaaa dataaa>>>>>>>", data)
     res.render('idea/read', {data:data})
   })
 })

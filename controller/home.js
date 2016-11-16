@@ -8,10 +8,9 @@ router.get('/', isLoggedIn, function(req, res) {
   db.idea.findAll(
     {
       order: 'id DESC',
-      include: [db.user]
+      include: [db.user,db.follow]
     }
   ).then(function(data) {
-  // console.log(data)
   res.render('homepage/home', {data:data});
 })
 });
@@ -22,7 +21,6 @@ router.get('/tech', isLoggedIn, function(req, res) {
         industry: "Tech",
       }
     }).then(function(data) {
-      console.log("hellllllllooooooo>>>>>>>>>>>>>>>>>>>>>>", data);
       res.render('homepage/tech', {data:data})
     })
 })

@@ -74,6 +74,10 @@ table {
     text-decoration: none;
 }
 
+.button:focus {
+	outline: rgb(255, 255, 255);
+}
+
 .button.white {
   background-color: #fff;
   color:#4fc08d;
@@ -220,6 +224,11 @@ input::-webkit-input-placeholder {
 
 .byline.below{
   color: #42b983;
+}
+
+.byline.below.right{
+  color: #42b983;
+	padding-left: 30px;
 }
 
 .byline3 {

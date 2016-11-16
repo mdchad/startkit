@@ -13,13 +13,13 @@
 
       <a href="/home/tech" class='sidelink'>Pitch</a>
       <a href="/home/iot" class='sidelink'>Feedback</a>
-      <a href="/home/iot" class='sidelink'>Inspiration</a>
+      <a href="/inspiration/all" class='sidelink'>Inspiration</a>
 
     </div>
     <div class="col-md-8 top-link">
         <a href='/idea/create' class="button white">Pitch an idea</a>
         <a href='/feedback/create' class="button white">Get feedback</a>
-        <a href='/inspiration/all' class="button white">Inspiration</a>
+        <a href='/inspiration/create' class="button white">Inspiration</a>
     </div>
     <div class="col-md-9">
       <h1>Popular</h1>
@@ -35,6 +35,7 @@
               <p class="read byline tooltip1">
                 <span class="byline below">By </span>
                 <%= data[i].user.fullName %>
+                <span class="byline below right"><%= data[i].follows.length %> followers </span>
                 <span class="tooltiptext"><%= data[i].user.fullName %><br><%= data[i].user.job %></span>
               </p>
               <!-- <p><a href="#" class="button" role="button">Button</a></p> -->
