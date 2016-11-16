@@ -24,7 +24,13 @@
     <div class="col-md-9">
       <h1>Popular</h1>
       <hr>
-    <% for(var i = 0; i < data.length ; i++ ){ %>
+      <% var currentData; %>
+      <% if (data.length > 2) { %>
+      <% currentData = 3 %>
+      <% } else { %>
+      <%  currentData = data.length %>
+      <%  } %>
+    <% for(var i = 0; i < currentData ; i++ ){ %>
       <div class="row">
         <div class="col-sm-6 col-md-4 "><a class='card1' href="idea/<%= data[i].id %>">
           <div class="thumbnail">
